@@ -1,0 +1,316 @@
+% A CV template inspired by simple websites with a main infinite scroll body and a little navigation at the side. Only that here, the navigation is the contact info. The image can easily be taken away if not wanted/needed (it's still customary in German speaking areas). I was told some more classical applications in Academia prefer one column and a slightly bigger font which is easier on the eyes of tired hiring committess (especially in German speaking areas where you seldom have page limits for CVs and thus can easily use a bigger font size). So I thought what I could make of it and this is it. Howver, if you are in the industry or still insist on making your CV memorable and more visual with infographics, the usual ones from my other CVs are still included and should work. 
+% Since the same commands are used (or mostly the same), it should be easy for you to migrate your CV between my different templates, if you want to try something new.
+% And I was advised to include a (page 1 of 4) style page numbering somewhere so that if hiring committees print it out, they instantly know if they have lost a page.
+% Inspiration credit  also goes to Jan Kuester's https://www.overleaf.com/latex/templates/jan-kusters-left-sidebar-cv/tmmnhrkcmpgv with the paracol separation rule 
+% you can add content to the navbar below by using \switchcolumn or \switchcolumn* (to align cols at the current place)
+% if you want to make the font size even bigger, search and replace \small by nothing.
+% you can still use all sorts of infographics and fancy elements as shown on page 1 (such as \fancysection{cvcolour}{Deg}{rees}) or you can get rid of all of them (replace by normal sections)for a very academic look
+
+
+\documentclass[blue]{monocolnavbarcv}
+% available options are: turquoise, red, lighthipsterblue, rose, blue, pastelgreen,
+% grey, allblack
+\usepackage[utf8x]{inputenc}
+
+\usepackage[familydefault,light]{Chivo} %% Option 'familydefault' only if the base font of the document is to be sans serif
+\usepackage[default]{raleway}
+\usepackage[T1]{fontenc}
+
+%\usepackage[defaultsans]{droidsans}
+%\usepackage[default]{comfortaa}
+%\usepackage{cmbright}
+%\usepackage{fetamont}
+%\usepackage[default]{gillius}
+%\usepackage[light,math]{iwona}
+%\usepackage[thin]{roboto} 
+
+
+\getpagesetup
+
+%------------------------------------------------------------------
+\title{Monocol Navbar CV}
+\author{\LaTeX{} Ninja}
+\date{December 2019}
+
+\begin{document}
+
+
+%-------------------------------------------------------------
+
+%\begin{center}\hspace{-2cm}\headername{JACK}{\color{black!80} SPARROW}\end{center}\vspace{1cm}
+
+%------------------------------------------------
+
+\setupparacol
+\begin{paracol}{2}
+
+\begin{makeheader}
+\headername{JACK}{SPARROW}
+
+\end{makeheader}
+
+\begin{navbar}
+\roundpic{jack.jpg}
+
+\getgreyishblackfont
+
+{
+\footnotesize
+\faEnvelopeO~The Black Pearl \\
+\faMapMarker~Tortuga \\ \faPhone~0099/333 564 \\ \faAt~\protect\url{jack@sparrow.com} \\
+\faHome~\protect\url{sparrow.com} \\
+}
+\medskip
+
+\adressline{The Black Pearl, Tortuga, The East Indies. The Black Pearl, Tortuga, The East Indies.}
+ 
+\bigskip
+
+\scalebox{0.6}{
+\iconcross{\Huge}{cvaltcolour}{cvcolour}{\faBook}{\href{mailto:the.latex.ninja@gmail.com}{\faEnvelopeO}}{\faPhone}{\faCode}
+} 
+
+\bigskip
+
+%\infobubble{\faAt}{cvcolour}{cvaltcolour}{jack@sparrow.org}
+
+\twitter{@sparrow}
+
+\linkedin{Jack Sparrow}
+
+\facebook{j.sparrow}
+
+\github{thesparrow}
+
+%\orcid{0000-0000-0000-0000}
+
+\end{navbar}
+
+\switchcolumn
+
+
+\fancysection{cvcolour}{Edu}{cation}
+\begin{tabular}{r >{\small}p{\paracolwidth} >{\small\itshape\color{cvcolour}}r}
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+\end{tabular}
+\medskip
+
+\fancysection{cvcolour}{Pro}{gramming}
+
+\progressarc{2mm}{cvcolour}{1cm}{cvaltcolour}{\large\bf \textbf{.cpp}}{Object-Oriented \\ Programming}{below}{40} \hfill \progressarc{2mm}{cvcolour}{1cm}{cvaltcolour}{\large\bf \textbf{.py}}{General \\ Purpose}{below}{70} \hfill
+\progressarc{2mm}{cvcolour}{1cm}{cvaltcolour}{\large\bf \textbf{.r}}{Stylo- \\ metry}{below}{55} \hfill 
+\progressarc{2mm}{cvcolour}{1cm}{cvaltcolour}{\large\bf \textbf{.cpp}}{Object-Oriented \\ Programming}{below}{40}
+
+\medskip
+
+\fancysection{cvcolour}{Ski}{lls}
+
+\subsection{National}
+
+\begin{tabular}{r >{\small}p{\paracolwidth} >{\small\itshape\color{cvcolour}}r}
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+
+\end{tabular}
+\medskip
+
+\textsc{\large International}\\[0.5em]
+
+\begin{tabular}{r >{\small}p{\paracolwidth} >{\small\itshape\color{cvcolour}}r}
+
+    1690 & \textbf{Spoken,} English, French & London \\ 
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London
+\end{tabular}
+\bigskip
+
+
+
+\fancysection{cvcolour}{Com}{munication Skills}
+
+\begin{tabular}{>{\small\bfseries}r >{\small}p{\paracolwidth}}
+    Friendliness & Very Good \\
+    Parler & Master Level \\
+    Spoken & English, French
+\end{tabular}
+
+\bigskip
+
+%-----------------------------------------------------------
+
+
+\switchcolumn*
+\subsection{Degrees}
+{\footnotesize
+\begin{tabular}{>{\ssmall\bfseries}rp{\onefifthwidth}}
+    \cvdegree{1710}{Captain}{Mag.}{\ssmall Tortuga Uni }{} \\
+    \cvdegree{1715}{Bucaneering}{M.A.}{\ssmall London }{} \\
+    \cvdegree{1720}{Bucaneering}{B.A.}{\ssmall London }{}
+\end{tabular}
+\bigskip
+
+\progressarc{1mm}{cvcolour}{0.5cm}{cvaltcolour}{.cpp}{\footnotesize Games}{below}{40} \hfill \progressarc{1mm}{cvcolour}{0.5cm}{cvaltcolour}{.py}{Python}{below}{70} \hfill
+\progressarc{1mm}{cvcolour}{0.5cm}{cvaltcolour}{.r}{Stylo}{below}{55} \hfill 
+\progressarc{1mm}{cvcolour}{0.5cm}{cvaltcolour}{.js}{CTF}{below}{40}
+
+\medskip
+
+\subsection{Programming}
+\begin{minipage}[t]{\onefifthwidth}
+\begin{tabular}{>{\ssmall}r@{\hspace{0.1em}}l}
+     html &  \barrule{0.4}{0.25em}{cvcolour}\\
+     \LaTeX{} & \barrule{0.55}{0.25em}{cvcolour} \\
+     py & \barrule{0.5}{0.25em}{cvcolour} \\
+     r & \barrule{0.25}{0.25em}{cvcolour} \\
+     js & \barrule{0.1}{0.25em}{cvcolour} \\
+\end{tabular}
+\end{minipage}
+}
+\switchcolumn
+
+\newpage
+\fancysection{cvcolour}{Sho}{rt Resumé}
+
+\begin{tabular}{r| p{\paracolwidth}}
+    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvaltcolour}}{Finally got the goddamn ship back.\lorem\lorem} \\
+    \cvevent{2016--2017}{Captain of the Black Pearl}{Lead}{Tortuga \color{cvaltcolour}}{Found a secret treasure, lost the ship. \lorem}
+\end{tabular}
+\vspace{1em}
+
+
+
+
+
+\fancysection{cvcolour}{Pro}{gramming}
+
+\begin{minipage}[t]{\paracolwidth}
+\begin{tabular}{r @{\hspace{0.2em}}l}
+     html &  \barrule{0.4}{0.5em}{cvcolour}\\
+     \LaTeX{} & \barrule{0.55}{0.5em}{cvcolour} \\
+     python & \barrule{0.5}{0.5em}{cvcolour} \\
+     r & \barrule{0.25}{0.5em}{cvcolour} \\
+     js & \barrule{0.1}{0.5em}{cvcolour} \\
+\end{tabular}
+\end{minipage}
+\vspace{1em}
+
+\fancysection{cvcolour}{Cer}{tificates \& Grants}
+
+\begin{tabular}{>{\small\bfseries}r >{\small}p{0.55\textwidth}}
+    1708 & Captain's Certificates \\
+    1710 & Travel grant \\
+    1715--1716 & Grant from the Pirate's Company
+\end{tabular}
+\vspace{1em}
+
+\fancysection{cvcolour}{Cer}{tificates \& Grants}
+
+\begin{tabular}{>{\small\bfseries}r >{\small}p{0.55\textwidth}}
+    1708 & Captain's Certificates \\
+    1710 & Travel grant \\
+    1710 & Travel grant \\
+    1715--1716 & Grant from the Pirate's Company
+\end{tabular}
+\vspace{1em}
+
+\switchcolumn*
+
+
+\subsection{Languages}
+{\footnotesize
+\begin{tabular}{l | l}
+\textbf{English} &  {\phantom{x}\small native} \\
+\textbf{French} &  \pictofraction{\faCircle}{cvcolour}{2}{black!30}{1}{\tiny} \\
+\textbf{Spanish} &  \pictofraction{\faCircle}{cvcolour}{1}{black!30}{2}{\tiny} \\
+\textbf{Italian} &  \pictofraction{\faCircle}{cvcolour}{2}{black!30}{1}{\tiny}
+\end{tabular}
+}
+\vspace{1em}
+
+\switchcolumn
+
+\fancysection{cvcolour}{Tal}{ks}
+
+\begin{tabular}{>{\small\bfseries}r >{\small}p{\paracolwidth}}
+    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720). \\
+    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+\end{tabular}
+\bigskip
+
+\fancysection{cvcolour}{Hob}{bies}
+
+\hobbyicon{\color{white}\faBook}{Reading}{cvcolour}{\huge}{1.5em}
+\hfill 
+\hobbyicon{\color{white}\faUniversity}{Learning}{cvcolour}{\huge}{1.5em}
+\hfill 
+\hobbyicon{\color{white}\faLeaf}{Nature}{cvcolour}{\huge}{1.5em}
+\hfill 
+\hobbyicon{\color{white}\faChild}{Running}{cvcolour}{\huge}{1.5em}
+\bigskip
+
+\section{Degrees}
+\begin{tabular}{r p{\paracolwidth}}
+    \cvdegree{1710}{Captain and Chief of Bucaneering}{Mag.}{Royal Tortuga University of the Crown}{} \\
+    \cvdegree{1715}{Bucaneering}{M.A.}{London }{} \\
+    \cvdegree{1720}{Bucaneering}{B.A.}{London }{}
+\end{tabular}
+
+\section{Invited Talks}
+\begin{tabular}{>{\small\bfseries}r >{\small}p{\paracolwidth}}
+    Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726. \\
+    May 1730 & ``There and Back Again'', at: \emph{Annual LOTR Conference} in Mordor, May 1730.
+\end{tabular}
+
+
+
+\section{Education}
+\begin{tabular}{r >{\small}p{\paracolwidth} >{\small\itshape\color{cvcolour}}r}
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+\end{tabular}
+\bigskip
+
+\section{Resume}
+\begin{tabular}{r| p{\paracolwidth}}
+    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvaltcolour}}{Finally got the goddamn ship back.\lorem\lorem} \\
+    \cvevent{2018--2021}{Captain of the Black Pearl}{Lead}{East Indies \color{cvaltcolour}}{Finally got the goddamn ship back.} \\
+    \cvevent{2016--2017}{Captain of the Black Pearl}{Lead}{Tortuga \color{cvaltcolour}}{Found a secret treasure, lost the ship. \lorem}
+\end{tabular}
+\vspace{1em}
+
+\section{Talks}
+\begin{tabular}{>{\small\bfseries}r >{\small}p{\paracolwidth}}
+    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720). \\
+    1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+\end{tabular}
+\bigskip
+
+\section{Education}
+\begin{tabular}{r >{\small}p{\paracolwidth} >{\small\itshape\color{cvcolour}}r}
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+    2014 & \textbf{Programming,} C++, C & Tortuga \\
+    2011 & \textbf{Web,} JavaScript & Port Royal \\
+    1690 & \textbf{Spoken,} English, French & London \\ 
+\end{tabular}
+
+
+\end{paracol}
+
+\end{document}
